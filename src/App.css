@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 700px;
+  height: 400px;
+  display: flex;
+  position: relative;
+}
+
+.clickable-background {
+  cursor: pointer;
+  background-color: lightblue;
+  width: 500px;
+  height: 300px;
+}
+
+.element-with-hole {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  clip-path: path('M 0,0 H 9999 V 9999 H 0 z M 100,100 m -50,0 a 50,50 0 1,0 100,0 a 50,50 0 1,0 -100,0');
+  background-color: rgba(0, 0, 0, 0.5);
+}
